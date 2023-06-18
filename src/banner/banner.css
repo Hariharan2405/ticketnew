@@ -1,0 +1,35 @@
+@media(min-width:100px){
+
+}
+@media(min-width:620px){
+    
+}
+@media(min-width:860px){
+    
+}
+@media(min-width:1060px){
+    
+}
+.banner-row{
+    padding: 10px 0;
+}
+.banner-container{
+    width:100%;
+    height: auto;
+    margin: auto;
+    overflow: visible!important;
+} 
+.banner-row img{
+    width: 100%;
+}
+#banner{
+    overflow: visible!important;
+}
+.banner-img{
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slick-list button{
+    display: none;
+}

@@ -1,0 +1,115 @@
+@media(min-width:100px){
+    #links,#cinemas{
+        display: none;
+    }
+    footer{
+        padding: 50px 20px 0;
+    }
+    .download{
+        display: block;
+    }
+    .footer-col{
+        display: block!important;
+    }
+    .care{
+        padding-top: 20px;
+    }
+}
+@media(min-width:530px){
+    #browseall,#links{
+        display: block;
+    }
+    #cinemas{
+        display: none;
+    }
+    .footer-col{
+        display: flex!important;
+    }
+    .care{
+        padding-top: 0;
+    }
+}
+@media(min-width:860px){
+    #cinemas{
+        display: block;
+    }
+    footer{
+        padding: 50px 0 0;
+    }
+    .download{
+        display: flex;
+    }
+}
+@media(min-width:1060px){
+    
+}
+.footer-col{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #d7dbdf;
+}
+.footer-col1{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px 0;
+}
+.download-icons,.care,.care-icon{
+    display: flex;
+    align-items: center;
+    gap:20px
+}
+.download{
+    align-items: center;
+    gap:20px
+}
+.care{
+    text-align: center;
+}
+.download h3{
+    width: 240px;
+}
+.download-icons a{
+    display: block;
+    width:150px;
+}
+.apple{
+    width: 135px!important;
+}
+.download-icons img{
+    width:100%;
+}
+.care-icon{
+    width: 50px;
+    height: 50px;
+    border: 1px solid #d7dbdf;
+    border-radius: 50%;
+    justify-content: center;
+}
+.care-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:10px;
+}
+.care i{
+    font-size: 30px;
+}
+.footer-col1 li{
+    color: hsla(0,0%,6%,.54);
+    padding-bottom: 15px;
+    font-weight: 600;
+}
+.footer-col1 ul{
+    padding: 15px 0;
+}
+.cinemas{
+    display: flex;
+    gap:50px;
+}
+#cinemas{
+    width: 50%;
+}

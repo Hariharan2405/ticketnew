@@ -1,0 +1,132 @@
+@media(min-width:100px){
+    .poster-img img,.poster-details{
+        height: 200px;
+    }
+    .poster-details h1{
+        font-size: 20px;
+    }
+    .poster-details p{
+        font-size: 14px;
+    }
+    .like-dislike{
+        display: none!important;
+    }
+    .showlist p{
+        font-size: 14px;
+    }
+}
+@media(min-width:620px){
+    .poster-img img,.poster-details{
+        height: 300px;
+    }
+    .poster-details h1{
+        font-size: 30px;
+    }
+    .poster-details p{
+        font-size: 16px;
+    }
+    .like-dislike{
+        display: flex!important;
+    }
+    .showlist p{
+        font-size: 12px;
+    }
+}
+@media(min-width:860px){
+    .poster-details h1{
+        font-size: 40px;
+    }
+    .poster-details p{
+        font-size: 16px;
+    }
+}
+@media(min-width:1060px){
+    
+}
+.hide{
+    display: none;
+}
+.poster-img img{
+    width: 100%;
+    vertical-align: middle;
+}
+.poster-row{
+    position: relative;
+    overflow: hidden;
+}
+.poster-details{
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    background-color: #00000085;
+    align-items: flex-end;
+}
+.poster-movie{
+    padding-bottom: 20px;
+    width: 90%;
+    margin: 0 auto;
+}
+.poster-movie i,.like-rate i{
+    color: red;
+    font-size: 20px;
+}
+.poster-movie .poster-rate{
+    font-size: 20px;
+    font-weight: 700;
+}
+.poster-row1{
+    width: 90%;
+    margin: auto;
+    padding: 15px 0;
+    height: 80px;
+}
+.poster-row1,.showlist,.like-dislike,.like-rate,.like,.dislike,.like-click{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+}
+.showlist p{
+    cursor: pointer;
+}
+.like-rate{
+    align-items: baseline;
+    padding: 0 20px;
+    border-left: 1px solid hsla(0,0%,6%,.13);
+}
+.like,.dislike{
+    border: 1px solid hsla(0,0%,6%,.13);
+    color:hsla(0,0%,6%,.54);
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.red{
+    color: red!important;
+}
+.black{
+    color: #000!important;
+}
+.like-black{
+    color: #000;
+}
+#poster{
+    background-color: #fff;
+}
+.under{
+    font-weight: 800;
+    position: relative;
+}
+.under::after{
+    content: " ";
+    width: auto;
+    height:2px;
+    background-color: red;
+    position: absolute;
+    top:45px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

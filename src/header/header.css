@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@media(min-width:100px){
+    .header-left ul,.header-right .login,.header-right .header-icons{
+        display: none;
+    }
+    .header-left .header-menu{
+        display: block;
+    }
+    .header-left>a{
+        width: 80px;
+    }
+    .header-row{
+        padding: 10px 10px;
+    }
+    
+}
+@media(min-width:620px){
+    .header-left>a{
+        width: 100px;
+    }
+    .header-row{
+        padding: 20px 10px;
+    }
+}
+@media(min-width:860px){
+    .header-left ul,.header-right .login,.header-right .header-icons{
+        display: flex;
+    }
+    .header-right .header-menu{
+        display: none;
+    }
+    .header-left>a{
+        width: 120px;
+    }
+}
+#home{
+    overflow: hidden;
+}
+header{
+    background-color: #fff;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+.header-menu{
+    position: relative;
+    cursor: pointer;
+}
+.header-menu ul{
+    display: none;
+    width: 150px;
+    position: absolute;
+    z-index: 999;
+    background-color: #fff;
+    padding: 20px;
+    left: 100px;
+}
+.header-menu li{
+    padding-bottom: 10px;
+}
+.menu-toggle{
+    display: block!important;
+    left: -80px!important;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-left{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    gap:10%;
+}
+.header-left img{
+    width: 100%;
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+header li{
+    font-size: 20px;
+    font-weight: 700;
+}
+.header-right{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.login{
+    display: flex;
+    align-items: center;
+    background-color: #00baf2;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+.login i,.header-icons i{
+    border-radius: 50%;
+    background-color: #002970;
+    color: #fff;
+    display: flex;
+    font-size: 30px;
+    align-items: flex-end;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+.login p{
+    padding: 10px 15px;
+}
+.header-icons{
+    display: flex;
+    align-items: center;
+}
+.header-icons i{
+    align-items: center;
+    font-size: 20px;
+}
+.play{
+    padding: 0 20px;
+    border-left: 1px solid black;
+}

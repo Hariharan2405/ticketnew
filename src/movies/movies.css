@@ -1,0 +1,141 @@
+@media(min-width:100px){
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .movies-card{
+        width: 90%;
+    }
+    .movies-col{
+        justify-content: center!important;
+    }
+    .card-img-pc{
+        display: none;
+    }
+    .card-img-mobile{
+        display: block;
+    }
+    .card-img img{
+        height: 20vh;
+    }
+    .card-book{
+        display: flex;
+        justify-content: space-between;
+    }
+    .card-bt{
+        padding: 20px 20px;
+    }
+}
+@media(min-width:620px){
+    .container{
+        width: 95%;
+        margin: auto;
+    }
+    .movies-card{
+        width: 48%;
+    }
+    .movies-col{
+        justify-content: space-between!important;
+    }
+    .card-img-pc{
+        display: block;
+    }
+    .card-img-mobile{
+        display: none;
+    }
+    .card-img img{
+        height: initial;
+    }
+    .card-book{
+        display: block;
+    }
+    .card-bt{
+        padding: 20px 0;
+    }
+}
+@media(min-width:860px){
+    .container{
+        width: 90%;
+        margin: auto;
+    }
+    .movies-card{
+        width: 32%;
+    }
+    .movies-col{
+        justify-content: center!important;
+        gap: 1%;
+    }
+}
+@media(min-width:1060px){
+    .movies-card{
+        width: 23%;
+    }
+    .movies-col{
+        justify-content: space-between!important;
+    }
+}
+#movies{
+    padding: 15px 0;
+}
+.movies-row{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.movies-col{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.movies-card{
+    /* width:23%; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    overflow: hidden;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.card-img{
+    position: relative;
+}
+.card-img i{
+    color: red;
+}
+.card-img img{
+    width: 100%;
+    vertical-align: middle;
+}
+.card-img span{
+    position: absolute;
+    color:#fff;
+    border-radius: 10px;
+}
+.rate{
+    bottom: 10px;
+    left:10px;
+    background-color: #0000008c;
+    padding: 10px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.new{
+    bottom: 10px;
+    right:10px;
+    background-color: darkgreen;
+    padding: 10px;
+    font-weight: 700;
+}
+.card-details{
+    padding: 16px 12px;
+}
+.card-bt{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    border-top: 1px solid #ccc;
+    color: blue;
+}

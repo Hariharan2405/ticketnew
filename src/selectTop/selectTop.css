@@ -1,0 +1,148 @@
+@media(min-width:100px){
+    .selectTop-col{
+        text-align: left;
+        padding: 20px 10px 10px;
+    }
+    .selectTop-col h2{
+        font-size: 20px;
+        padding-bottom: 5px;
+    }
+    .selectTop-col p{
+        font-size: 12px;
+    }
+    .selected-date{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .selectTop-col1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding:0 0 10px 10px;
+    }
+    .selected-day,.selected-time p{
+        font-size: 10px;
+    }
+    .selected-time h4{
+        font-size: 12px;
+    }
+    .selected-time{
+        padding: 5px 10px;
+    }
+    .select-time{
+        gap: 10px;
+    }
+    .available-seat,.selected-seat,.booked-seat{
+        width:10px;
+        height: 10px;
+        border-radius: 2px;
+    }
+    .seat-avail{
+        font-size: 8px;
+    }
+    .available{
+        padding-top: 10px;
+    }
+}
+@media(min-width:620px){
+    .selectTop-col{
+        text-align: center;
+        padding: 20px 0 10px;
+    }
+    .selectTop-col h2{
+        font-size: 25px;
+        padding-bottom: 10px;
+    }
+    .selectTop-col p{
+        font-size: 16px;
+    }
+    .selected-date{
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .selectTop-col1{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+    }
+    .selected-day{
+        font-size: 14px;
+    }
+    .selected-time p{
+        font-size: 12px;
+    }
+    .selected-time h4{
+        font-size: 16px;
+    }
+    .selected-time{
+        padding: 10px 25px;
+    }
+    .select-time{
+        gap: 30px;
+    }
+    .available-seat,.selected-seat,.booked-seat{
+        width:15px;
+        height: 15px;
+        border-radius: 3px;
+    }
+    .seat-avail{
+        font-size: 14px;
+    }
+    .available{
+        padding-top: 0;
+    }
+}
+@media(min-width:860px){
+    .available-seat,.selected-seat,.booked-seat{
+        width:18px;
+        height: 18px;
+        border-radius: 5px;
+    }
+    .seat-avail{
+        font-size: 16px;
+    }
+}
+@media(min-width:1060px){
+    
+}
+#selectTop{
+    position: sticky;
+    top:0;
+    background-color: #f5f7fa;
+}
+.selectTop-col1{
+    display: flex;
+}
+.available{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.available-seat,.selected-seat,.booked-seat{
+    border: 1.5px solid #00b8f5;
+    display: block;
+}
+.selected-seat{
+    background-color: #00b8f5;
+}
+.booked-seat{
+    background-color: hsla(0,0%,6%,.22);
+    border: none;
+}
+.seat-avail{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.select-time{
+    display: flex;
+    align-items: center;
+}
+.selected-time{
+    text-align: center;
+    color: #fff;
+    background-color: #00b8f5;
+    border-radius: 10px;
+}
