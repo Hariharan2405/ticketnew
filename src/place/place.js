@@ -7,7 +7,7 @@ function Place() {
     let {state,dispatch}=useContext(Context);
     let change=(e)=>{
         // update(e.target.value);
-        dispatch({type:"search",payload:e.target.value})
+        dispatch({type:"search",payload:e.target.value.toLowerCase()})
     }
   return (
     <div id='place'>
@@ -20,7 +20,7 @@ function Place() {
                     </div>
                     <div className='place-search'>
                     <i class="ri-search-line"></i>
-                    <input onChange={change} type='search' placeholder='Search for Movie'/>
+                    <input onChange={change} type='search' placeholder='Search for Movie' value={state.search}/>
                     </div>
                 </div>
 

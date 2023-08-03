@@ -15,10 +15,11 @@ function Router() {
     <Context.Provider value={{state,dispatch}}>
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Home/>}></Route>
+            <Route path='/ticketnew' element={<Home/>}></Route>
             <Route path='/movieDetails' element={<MovieDetails/>}></Route>
             <Route path='/select' element={<Select/>}></Route>
             <Route path='/checkout' element={<Checkout/>}></Route>
+            <Route path='*' element={<Home/>}></Route>
         </Routes>
     </BrowserRouter>
     </Context.Provider>

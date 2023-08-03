@@ -10,7 +10,7 @@ export default class PauseOnHover extends Component {
         infinite: true,
         centerPadding: "60px",
         slidesToShow: 1,
-        speed: 5000,
+        speed: 1000,
         autoplay: true,
         pauseOnHover: true
       };

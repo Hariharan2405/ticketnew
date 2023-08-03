@@ -3,9 +3,6 @@ import "./seat.css"
 import {useNavigate} from "react-router-dom"
 import { Context } from '../reduce'
 
-
-let array=[];
-
 function Seat() {
     var a=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W"]
     var num1=["01","02","03","04","05","06","07"];
@@ -17,36 +14,35 @@ function Seat() {
     var numV=["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18",
     "19","20","21","22","23","24","25","26","27","28"];
 
-    // let [number,setNumber]=useState("");
     let [numArray,setArray]=useState([]);
     let [payment,setPayment]=useState([]);
 
     let seatSelect=(e)=>{
-        if(array.length<10 && !e.target.classList.contains("bookedSeat")){
+        if(numArray.length<=10 && !e.target.classList.contains("bookedSeat")){
             let sn=e.target.dataset.seatnum;
-            if(!e.target.classList.contains("selectedSeat")){
+            if(numArray.length<10 && !e.target.classList.contains("selectedSeat")){
                 e.target.classList.add("selectedSeat")
-                array.push(sn);
-                array.sort();
-                setArray(array);
+                numArray.push(sn);
+                numArray.sort();
                 let selectedSeats=document.querySelectorAll(".selectedSeat");
                 selectedSeats.forEach(function(x,y){
                     x.innerText=y+1;
                 })
             }
             else{
-                array.splice(array.indexOf(sn),1);
-                setArray(array);
-                e.target.innerText="";
-                e.target.classList.remove("selectedSeat");
-                let selectedSeats=document.querySelectorAll(".selectedSeat");
-                selectedSeats.forEach(function(x,y){
-                    x.innerText=y+1;
-                })
-                
+                if(e.target.classList.contains("selectedSeat")){
+                    numArray.splice(numArray.indexOf(sn),1);
+                    setArray(numArray);
+                    e.target.innerText="";
+                    e.target.classList.remove("selectedSeat");
+                    let selectedSeats=document.querySelectorAll(".selectedSeat");
+                    selectedSeats.forEach(function(x,y){
+                        x.innerText=y+1;
+                    })
+                }
             }
             var pay=0;
-            array.map(function(x){
+            numArray.map(function(x){
                 if(x.includes("V") || x.includes("W")){
                     pay=pay+60
                 }
@@ -56,7 +52,7 @@ function Seat() {
             })
             setPayment(pay);
         }
-        if(array.length==0){
+        if(numArray.length==0){
             document.querySelector(".ticketBook").classList.add("hide")
         }
         else{
@@ -93,7 +89,7 @@ function Seat() {
         })
         }
         else{
-            nav("/")
+            nav("/ticketnew")
         }
     }
 

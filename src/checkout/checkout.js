@@ -3,6 +3,7 @@ import { Context } from '../reduce';
 import { Movie } from '../movies/movies';
 import "./checkout.css"
 import { useNavigate } from 'react-router-dom';
+import Header from '../header/header';
 
 function Checkout() {
     let {state,dispatch}=useContext(Context);
@@ -19,10 +20,9 @@ function Checkout() {
         })
         }
         else{
-            nav("/");
+            nav("/ticketnew");
         }
     }
-
     let toggle=(e)=>{
         e.currentTarget.querySelectorAll("i").forEach(function(x){
             x.classList.toggle("hide")
@@ -33,8 +33,63 @@ function Checkout() {
         console.log(document.querySelectorAll(".hidden"));
     }
 
-    let booked=()=>{
-        var obj={
+    var options = {
+        "key": "rzp_test_qVN4QlLNt0HaA5",
+        "amount": (parseInt(state.ticket.obj.amount)+((state.ticket.obj.seats.length*25)+((state.ticket.obj.seats.length*25)+parseInt(state.ticket.obj.amount))*0.18))*100,
+        "currency": "INR",
+        "description": "Ticketnew",
+        "image": "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg",
+        "prefill":
+        {
+          "email": "harichandran33@gmail.com",
+          "contact": +918489110888,
+        },
+        "theme": {
+            "color": "#00baf2"
+        },
+        config: {
+          display: {
+            blocks: {
+              utib: {
+                name: "Pay using Axis Bank",
+                instruments: [
+                  {
+                    method: "card",
+                    issuers: ["UTIB"]
+                  },
+                  {
+                    method: "netbanking",
+                    banks: ["UTIB"]
+                  },
+                ]
+              },
+              other: { 
+                name: "Other Payment modes",
+                instruments: [
+                  {
+                    method: 'upi',
+                  },
+                  {
+                    method: "card",
+                    issuers: ["ICIC"]
+                  },
+                  {
+                    method: 'netbanking',
+                  },
+                  
+                ]
+              }
+            },
+          
+            sequence: ["block.utib", "block.other"],
+            preferences: {
+              show_default_blocks: false
+            }
+          }
+        },
+        "handler": function (response) {
+          // alert(response.razorpay_payment_id);
+          var obj={
             name:state.theater.obj.movie,
             theater:state.theater.obj.theater,
             date:state.theater.obj.date,
@@ -45,16 +100,41 @@ function Checkout() {
         var a=JSON.parse(localStorage.getItem("ticketnew")).array;
         a.push(obj);
         localStorage.setItem("ticketnew",JSON.stringify({array:a}));
-        document.querySelector(".pay-success").classList.remove("hide")
+          nav("/ticketnew");
+        },
+        "modal": {
+          "ondismiss": function () {
+            if (window.confirm("Are you sure, you want to close the form?")) {
+              nav(`/ticketnew`);
+            } else {
+              nav(`/ticketnew`);
+            }
+          }
+        }
+      }; 
+      
+      var rzp1 = new window.Razorpay(options);
+        
+
+    let booked=(e)=>{
+       
+        if(state.isLoged){
+            e.preventDefault();
+            rzp1.open();
+        }
+        else{
+            document.querySelector(".back").classList.remove("hide");
+        }
     }
 
     let home=()=>{
-        nav("/");
+        nav("/ticketnew");
     }
     
     
   return (
     <div onLoad={load}>
+        <Header/>
         <div id='checkout'>
             <div className='container'>
                 <div className='checkout-row'>

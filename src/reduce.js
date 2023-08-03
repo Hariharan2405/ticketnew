@@ -1,6 +1,8 @@
 import { createContext } from "react";
 
 export let Initial={
+    user:"Log in/ Signup",
+    isLoged:false,
     search:"",
     theater:{
         obj:{
@@ -35,6 +37,14 @@ export function Reduce(state,action) {
         case "search":return{
             ...state,
             search:action.payload
+        }
+        case "loged":return{
+            ...state,
+            isLoged:action.payload
+        }
+        case "login":return{
+            ...state,
+            user:action.payload
         }
     }
 }
